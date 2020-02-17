@@ -1,0 +1,18 @@
+public class Lab_Warmup_3
+{
+    public static void main(String[] args){
+        int key = 999;
+        while(key > 0){
+           int onesDigit = key % 10;
+           int tensDigit = ((key % 100) - onesDigit) / 10;
+           int hundredsDigit = (int)(key * .010);
+           if((hundredsDigit > tensDigit) && (tensDigit > onesDigit)){
+                System.out.println(key);
+                key--; 
+            }
+           else{
+               key--;
+           }
+        }
+    }
+}
