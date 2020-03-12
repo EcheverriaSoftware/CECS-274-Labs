@@ -1,0 +1,17 @@
+public class GCD_By_Recursion
+{
+    public static int GCD(int a, int b){
+        int maxInteger = Math.max(a, b);
+        int minInteger = Math.min(a, b);
+        int x = maxInteger % minInteger;
+        if(x == 0){
+            return minInteger;
+        }
+        else{
+            return GCD(x, minInteger);
+        }
+    }
+    public static void main(String [] args){
+        System.out.println(GCD(135, 20));
+    }
+}
